@@ -2,8 +2,11 @@
 [![](https://images.microbadger.com/badges/version/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own image badge on microbadger.com")
 
+English | [简体中文](https://github.com/huangzulin/aria2-ariang-pi/blob/master/README.zh-cn.md)
 
 Aria2 with Aira-Ng web UI.
+
+
 
 ## Brief Introduction
 * Use Apline:latest as base image, full image only **18Mb**.
