@@ -1,6 +1,5 @@
 # Aria2-AriaNg-pi
-[![](https://images.microbadger.com/badges/version/colinwjd/aria2-ariang.svg)](https://microbadger.com/images/colinwjd/aria2-ariang "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/colinwjd/aria2-ariang.svg)](https://microbadger.com/images/colinwjd/aria2-ariang "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own image badge on microbadger.com")
 
 Aria2 with Aira-Ng web UI.
 
