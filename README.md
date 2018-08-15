@@ -1,4 +1,4 @@
-# Aria2-AriaNg
+# Aria2-AriaNg-pi
 [![](https://images.microbadger.com/badges/version/colinwjd/aria2-ariang.svg)](https://microbadger.com/images/colinwjd/aria2-ariang "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/colinwjd/aria2-ariang.svg)](https://microbadger.com/images/colinwjd/aria2-ariang "Get your own image badge on microbadger.com")
 
@@ -28,7 +28,7 @@ docker build -t huangzulin/aria2-ariang-pi .
 
 Run command like below(You may need to change the ports).
 ```
-docker run --name aria2-ariang-pi \
+docker run -d --name aria2-ariang-pi \
 -p 6800:6800 -p 6880:80 -p 6888:8080 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
