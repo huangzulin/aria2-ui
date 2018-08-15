@@ -13,9 +13,9 @@ Aria2 with Aira-Ng web UI.
 ## Build
 ```
 git clone https://github.com/huangzulin/aria2-ariang-pi.git
-cd aria2-ariang
+cd aria2-ariang-pi
 chmod +x init.sh
-docker build -t colinwjd/aria2-ariang .
+docker build -t huangzulin/aria2-ariang-pi .
 ```
 
 ## Install
@@ -28,7 +28,7 @@ docker build -t colinwjd/aria2-ariang .
 
 Run command like below(You may need to change the ports).
 ```
-docker run --name aria2-ariang \
+docker run --name aria2-ariang-pi \
 -p 6800:6800 -p 6880:80 -p 6888:8080 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
