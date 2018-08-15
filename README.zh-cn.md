@@ -2,6 +2,7 @@
 [![](https://images.microbadger.com/badges/version/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own image badge on microbadger.com")
 
+[English](https://github.com/huangzulin/aria2-ariang-pi) | 简体中文
 
 Aria2 with Aira-Ng web UI.
 
