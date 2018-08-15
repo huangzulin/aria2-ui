@@ -35,3 +35,5 @@ docker run --name aria2-ariang \
 -e SECRET=YOUR_SECRET_CODE huangzulin/aria2-ariang-pi
 ```
 After finished, open http://serverip:6880/ in your browser for visiting Aria-Ng home page, open http://serverip:6888/ to browser your downloads folder.
+
+ref: https://github.com/colinwjd/aria2-ariang
