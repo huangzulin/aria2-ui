@@ -2,6 +2,8 @@ FROM alpine
 
 LABEL MAINTAINER="huangzulin"
 
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
 RUN apk update \
 	&& apk add --no-cache --update aria2 darkhttpd \
 	&& mkdir -p /aria2/conf /aria2/downloads aria-ng \
