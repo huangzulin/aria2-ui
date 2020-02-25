@@ -14,6 +14,8 @@ RUN apk update \
 COPY init.sh /aria2/init.sh
 COPY conf /aria2/conf
 
+RUN chmod +x /aria2/init.sh
+
 WORKDIR /
 VOLUME ["/aria2/conf", "/aria2/downloads"]
 EXPOSE 6800 80 8080
