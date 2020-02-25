@@ -1,0 +1,49 @@
+name: Docker
+
+on:
+  push:
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - master
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install buildx
+      run: |
+        curl -s https://api.github.com/repos/docker/buildx/releases/latest \
+        | grep "browser_download_url.*buildx-*.*linux-amd64" \
+        | cut -d : -f 2,3 \
+        | tr -d \" \
+        | wget -qi -
+        mkdir -p ~/.docker/cli-plugins/
+        mv buildx* ~/.docker/cli-plugins/docker-buildx
+        chmod +x ~/.docker/cli-plugins/docker-buildx
+    - name: Set up buildx
+      run: |
+        docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+        docker buildx create --use --name multi-arch-builder
+    - name: Available platforms
+      run: |
+        docker buildx inspect --bootstrap | grep Platforms
+    - name: Login to Docker Hub
+      run: |
+        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build and push
+      env:
+        PLATFORMS: linux/amd64,linux/386,linux/arm64,linux/arm/v7,linux/arm/v6
+        IMAGE_NAME: huangzulin/aria2-ariang-pi
+        IMAGE_TAG: latest
+        DOCKERFILE: Dockerfile
+        FILE_PATH: .
+      run: |
+        docker buildx build --push \
+          --platform ${PLATFORMS} \
+          -t ${IMAGE_NAME}:${IMAGE_TAG} \
+          -f ${DOCKERFILE} \
+          ${FILE_PATH}
