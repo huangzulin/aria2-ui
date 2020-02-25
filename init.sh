@@ -9,10 +9,9 @@ if [ ! -f /aria2/conf/delete.aria2.sh ]; then
 	cp /aria2/conf/delete.aria2.sh /root/.aria2/delete.aria2.sh
 fi
 
-chmod +x /root/.aria2/on-complete.sh
 touch /root/.aria2/aria2.session
 
-sh /root/.aria2/update-bt-tracker.sh
+# sh /root/.aria2/update-bt-tracker.sh
 
 darkhttpd /aria-ng --port 80 &
 darkhttpd /aria2/downloads --port 8080 &
