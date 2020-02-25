@@ -6,7 +6,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk update \
 	&& apk add --no-cache --update aria2 darkhttpd \
-	&& mkdir -p /aria2/conf /aria2/downloads aria-ng \
+	&& mkdir -p /aria2/conf /aria2/downloads /aria-ng \
 	&& wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.1.4/AriaNg-1.1.4-AllInOne.zip -O ariang.zip \
 	&& unzip ariang.zip -d /aria-ng \
 	&& rm -rf ariang.zip
