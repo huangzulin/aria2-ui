@@ -12,7 +12,7 @@ RUN apk update \
 	&& rm -rf ariang.zip
 
 COPY init.sh /aria2/init.sh
-COPY conf-temp /aria2/conf-temp
+COPY conf /aria2/conf
 
 WORKDIR /
 VOLUME ["/aria2/conf", "/aria2/downloads"]
