@@ -14,5 +14,5 @@ touch /root/.aria2/aria2.session
 sh /root/.aria2/update-bt-tracker.sh
 
 darkhttpd /aria-ng --port 80 &
-darkhttpd /aria2/downloads --port 8080 &
+darkhttpd /aria2/downloads --port 81 &
 aria2c --conf-path=/root/.aria2/aria2.conf
