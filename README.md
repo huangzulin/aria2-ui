@@ -26,7 +26,7 @@ Aria2 with Aira-Ng web UI.
 Run command like below(You may need to change the ports).
 ```
 docker run -d --name aria2-ui \
--p 6800:6800 -p 6880:80 -p 6888:8080 \
+-p 6800:6800 -p 6880:80 -p 6888:81 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
 huangzulin/aria2-ui

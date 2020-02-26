@@ -24,7 +24,7 @@ Aria2 with Aira-Ng web UI.
 执行一下命令(请根据实际情况修改端口及密钥).
 ```
 docker run -d --name aria2-ui \
--p 6800:6800 -p 6880:80 -p 6888:8080 \
+-p 6800:6800 -p 6880:80 -p 6888:81 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
 -e SECRET=YOUR_SECRET_CODE huangzulin/aria2-ui
