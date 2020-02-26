@@ -12,4 +12,4 @@ list=$(curl -s $tracker_url)
 url_list=$(echo $list | sed 's/[ ][ ]*/,/g')
 echo $url_list
 
-sed -i 's#bt-tracker.*#${url_list}#' /root/.aria2/aria2.conf
+sed -i "s#bt-tracker.*#bt-tracker=$url_list#" /root/.aria2/aria2.conf
