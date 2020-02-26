@@ -1,8 +1,8 @@
-# Aria2-AriaNg-pi
-[![](https://images.microbadger.com/badges/version/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own image badge on microbadger.com")
+# aria2-ui
+[![](https://images.microbadger.com/badges/version/huangzulin/aria2-ui.svg)](https://microbadger.com/images/huangzulin/aria2-ui "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/huangzulin/aria2-ui.svg)](https://microbadger.com/images/huangzulin/aria2-ui "Get your own image badge on microbadger.com")
 
-English | [简体中文](https://github.com/huangzulin/aria2-ariang-pi/blob/master/README.zh-cn.md)
+English | [简体中文](https://github.com/huangzulin/aria2-ui/blob/master/README.zh-cn.md)
 
 Aria2 with Aira-Ng web UI.
 
@@ -17,10 +17,10 @@ Aria2 with Aira-Ng web UI.
 
 ## Build
 ```
-git clone https://github.com/huangzulin/aria2-ariang-pi.git
-cd aria2-ariang-pi
+git clone https://github.com/huangzulin/aria2-ui.git
+cd aria2-ui
 chmod +x init.sh
-docker build -t huangzulin/aria2-ariang-pi .
+docker build -t huangzulin/aria2-ui .
 ```
 
 ## Install
@@ -33,11 +33,11 @@ docker build -t huangzulin/aria2-ariang-pi .
 
 Run command like below(You may need to change the ports).
 ```
-docker run -d --name aria2-ariang-pi \
+docker run -d --name aria2-ui \
 -p 6800:6800 -p 6880:80 -p 6888:8080 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
-huangzulin/aria2-ariang-pi
+huangzulin/aria2-ui
 ```
 After finished, open http://serverip:6880/ in your browser for visiting Aria-Ng home page, open http://serverip:6888/ to browser your downloads folder.
 

@@ -1,8 +1,8 @@
-# Aria2-AriaNg-pi
-[![](https://images.microbadger.com/badges/version/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/huangzulin/aria2-ariang-pi.svg)](https://microbadger.com/images/huangzulin/aria2-ariang-pi "Get your own image badge on microbadger.com")
+# aria2-ui
+[![](https://images.microbadger.com/badges/version/huangzulin/aria2-ui.svg)](https://microbadger.com/images/huangzulin/aria2-ui "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/huangzulin/aria2-ui.svg)](https://microbadger.com/images/huangzulin/aria2-ui "Get your own image badge on microbadger.com")
 
-[English](https://github.com/huangzulin/aria2-ariang-pi) | 简体中文
+[English](https://github.com/huangzulin/aria2-ui) | 简体中文
 
 Aria2 with Aira-Ng web UI.
 
@@ -15,10 +15,10 @@ Aria2 with Aira-Ng web UI.
 
 ## 构建
 ```
-git clone https://github.com/huangzulin/aria2-ariang-pi.git
-cd aria2-ariang-pi
+git clone https://github.com/huangzulin/aria2-ui.git
+cd aria2-ui
 chmod +x init.sh
-docker build -t huangzulin/aria2-ariang-pi .
+docker build -t huangzulin/aria2-ui .
 ```
 
 ## 安装
@@ -31,11 +31,11 @@ docker build -t huangzulin/aria2-ariang-pi .
 
 执行一下命令(请根据实际情况修改端口及密钥).
 ```
-docker run -d --name aria2-ariang-pi \
+docker run -d --name aria2-ui \
 -p 6800:6800 -p 6880:80 -p 6888:8080 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
--e SECRET=YOUR_SECRET_CODE huangzulin/aria2-ariang-pi
+-e SECRET=YOUR_SECRET_CODE huangzulin/aria2-ui
 ```
 结束之后, 在浏览器打开 http://serverip:6880/ 访问 Aria-Ng 主页, 打开 http://serverip:6888/ 浏览下载文件夹.
 
