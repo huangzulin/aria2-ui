@@ -15,14 +15,6 @@ Aria2 with Aira-Ng web UI.
 * Use Aria-Ng as aria2 web ui, it seems much more beautiful.
 * Use darkhttpd as http server, it's very small(Only 36K after complied) and easy to use.
 
-## Build
-```
-git clone https://github.com/huangzulin/aria2-ui.git
-cd aria2-ui
-chmod +x init.sh
-docker build -t huangzulin/aria2-ui .
-```
-
 ## Install
 1. Mount `/DOWNLOAD_DIR` to `/aria2/downloads` and `/CONFIG_DIR` to `/aria2/conf`. When starting container, it will create  `aria2.conf` file with default settings.
 2. Mapping ports:
@@ -40,5 +32,3 @@ docker run -d --name aria2-ui \
 huangzulin/aria2-ui
 ```
 After finished, open http://serverip:6880/ in your browser for visiting Aria-Ng home page, open http://serverip:6888/ to browser your downloads folder.
-
-ref: https://github.com/colinwjd/aria2-ariang
