@@ -7,6 +7,7 @@
 Aria2 with Aira-Ng web UI.
 
 ## 介绍
+* 支持平台: `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`.
 * 基于最新的easypi/alpine-arm构建，镜像只有**18Mb**.
 * 可自定义aria2配置.
 * 使用对移动的更友好 Aria-Ng作为web ui.

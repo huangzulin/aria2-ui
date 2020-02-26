@@ -9,6 +9,7 @@ Aria2 with Aira-Ng web UI.
 
 
 ## Brief Introduction
+* Supported platforms: `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`.
 * Use Apline:latest as base image, full image only **18Mb**.
 * You can edit aria2 config file out of the image.
 * Use Aria-Ng as aria2 web ui, it seems much more beautiful.
