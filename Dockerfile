@@ -2,8 +2,7 @@ FROM alpine
 
 LABEL MAINTAINER="huangzulin"
 
-RUN apk update \
-	&& apk add --no-cache --update curl aria2 darkhttpd \
+RUN apk add --no-cache curl aria2 darkhttpd \
 	&& mkdir -p /aria2/conf /aria2/downloads /aria-ng \
 	&& wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.1.4/AriaNg-1.1.4-AllInOne.zip -O ariang.zip \
 	&& unzip ariang.zip -d /aria-ng \
