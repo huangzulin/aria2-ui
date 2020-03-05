@@ -23,12 +23,11 @@ Aria2 with Aira-Ng web UI.
   * 8080 for downloads directory http service
 3. Set your secret code use "SECRET" variable, this will append `rpc-secret=xxx` to aira2.conf file.
 
-Run command like below(You may need to change the ports).
+## Quick start
 ```
-docker run -d --name aria2-ui \
+docker run -d --name aria2-ui  --restart=always \
 -p 6800:6800 -p 6880:80 -p 6888:81 \
 -v /DOWNLOAD_DIR:/aria2/downloads \
--v /CONFIG_DIR:/aria2/conf \
 huangzulin/aria2-ui
 ```
 After finished, open http://serverip:6880/ in your browser for visiting Aria-Ng home page, open http://serverip:6888/ to browser your downloads folder.
