@@ -8,10 +8,7 @@ Aria2 with Aira-Ng web UI.
 
 ## Quick start
 ```
-docker run -d --name aria2-ui  --restart=always \
--p 6800:6800 -p 6880:80 -p 6888:81 \
--v /DOWNLOAD_DIR:/aria2/downloads \
-huangzulin/aria2-ui
+docker run -d --name aria2-ui  --restart=always -p 6800:6800 -p 6880:80 -p 6888:81 -v /DOWNLOAD_DIR:/aria2/downloads huangzulin/aria2-ui
 ```
 After finished, open http://serverip:6880/ in your browser for visiting Aria-Ng home page, open http://serverip:6888/ to browser your downloads folder.
 
