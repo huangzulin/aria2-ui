@@ -3,9 +3,9 @@ FROM alpine
 LABEL MAINTAINER="huangzulin"
 
 RUN apk add --no-cache curl aria2 darkhttpd \
-	&& mkdir -p /aria2/conf /aria2/downloads /aria-ng \
+	&& mkdir -p /aria2/conf /aria2/downloads /ariang \
 	&& wget --no-check-certificate   -O ariang.zip \
-	&& unzip ariang.zip -d /aria-ng \
+	&& unzip ariang.zip -d /ariang \
 	&& rm -rf ariang.zip
 
 COPY init.sh /aria2/init.sh
