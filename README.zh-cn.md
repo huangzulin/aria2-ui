@@ -28,6 +28,6 @@ huangzulin/aria2-ui
 2. 端口映射:
   * 6800 aira2 jsonrpc端口
   * 80 ariang网页
-  * 8080 用于浏览下载的文件
+  * 6888 用于浏览下载的文件
 3. 使用 "SECRET" 设置rpc密钥, 其实将 `rpc-secret=xxx` 加入到 aira2.conf 文件中.
 
